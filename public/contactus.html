@@ -38,31 +38,31 @@
         }
     </style>
 
-<script>
-    function submitForm() {
-        var form = document.forms['contactform'];
-        var formData = new FormData(form);
+    <script>
+        function submitForm() {
+            var form = document.forms['contactform'];
+            var formData = new FormData(form);
 
-        var xhr = new XMLHttpRequest();
-        xhr.open("POST", "http://localhost:3000/contact", true);
-        xhr.onreadystatechange = function () {
-            if (xhr.readyState === 4) {
-                if (xhr.status === 200) {
-                    var response = JSON.parse(xhr.responseText);
-                    document.getElementById("responseMessage").innerText = response.message;
-                    document.getElementById("errorMessage").innerText = '';
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "http://localhost:3000/contact", true);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4) {
+                    if (xhr.status === 200) {
+                        var response = JSON.parse(xhr.responseText);
+                        document.getElementById("responseMessage").innerText = response.message;
+                        document.getElementById("errorMessage").innerText = '';
 
-                    // Clear form fields on success
-                    form.reset();
-                } else {
-                    document.getElementById("responseMessage").innerText = '';
-                    document.getElementById("errorMessage").innerText = 'Error submitting form. Please try again later.';
+                        // Clear form fields on success
+                        form.reset();
+                    } else {
+                        document.getElementById("responseMessage").innerText = '';
+                        document.getElementById("errorMessage").innerText = 'Error submitting form. Please try again later.';
+                    }
                 }
-            }
-        };
-        xhr.send(formData);
-    }
-</script>
+            };
+            xhr.send(formData);
+        }
+    </script>
 
 
 </head>
@@ -110,28 +110,34 @@
     <section>
         <div class="container mt-5 pt-4 pb-2">
             <div class="row">
-                <div class="col-sm-5 col-md-6 contact border-right" data-aos="zoom-in" data-aos-easing="ease-in-sine" data-aos-delay="100">
-                    <h2>Get in touch<hr class="contact-green-hr"></h2>
-                        <div class="col pt-5">
-                            <h4 class="contact-h4">Address</h4>
-                            <p><a href="https://goo.gl/maps/VCWbSRy8RZHmmAAe9" target="_blank"> HumanityHub, near DDU university,college road,Nadiad,387001</a></p>
-                            <hr class="line">
-                        </div>
-                        <div class="col pt-2">
-                            <h4 class="contact-h4">Phone</h4>
-                            <p><a href="tel:+917436041801">+917436041801,+918160393932</a></p>
-                            <hr class="line">
-                        </div>
-                        <div class="col pt-2">
-                            <h4 class="contact-h4">Email</h4>
-                            <p><a href="mailto:mailto:kartikpaliwal991@gmail.com">HumanityHub@gmail.com</a></p>
-                            <hr class="line">
-                        </div>
+                <div class="col-sm-5 col-md-6 contact border-right" data-aos="zoom-in" data-aos-easing="ease-in-sine"
+                    data-aos-delay="100">
+                    <h2>Get in touch
+                        <hr class="contact-green-hr">
+                    </h2>
+                    <div class="col pt-5">
+                        <h4 class="contact-h4">Address</h4>
+                        <p><a href="https://goo.gl/maps/VCWbSRy8RZHmmAAe9" target="_blank"> HumanityHub, near DDU
+                                university,college road,Nadiad,387001</a></p>
+                        <hr class="line">
+                    </div>
+                    <div class="col pt-2">
+                        <h4 class="contact-h4">Phone</h4>
+                        <p><a href="tel:+917436041801">+917436041801,+918160393932</a></p>
+                        <hr class="line">
+                    </div>
+                    <div class="col pt-2">
+                        <h4 class="contact-h4">Email</h4>
+                        <p><a href="mailto:mailto:kartikpaliwal991@gmail.com">HumanityHub@gmail.com</a></p>
+                        <hr class="line">
+                    </div>
                 </div>
                 <!--form section-->
                 <div class="col-sm-5  col-md-6 offset-md-0 contact" data-aos="fade-left" data-aos-easing="ease-in-sine"
                     data-aos-delay="100">
-                    <h2>Contact us<hr class="contact-green-hr"></h2>
+                    <h2>Contact us
+                        <hr class="contact-green-hr">
+                    </h2>
                     <form id="contactForm" name='contactform' method="post" action="/contact">
                         <div class="form-group">
                             <label for="name">Name</label>
@@ -151,7 +157,8 @@
                             <textarea class="form-control" rows="3" name='message'
                                 placeholder="Write your message here..." required></textarea>
                         </div>
-                        <div class="toast-body"><button type="submit" class="btn btn-outline-success mt-2" onclick="submitForm()">Submit</button></div>
+                        <div class="toast-body"><button type="submit" class="btn btn-outline-success mt-2"
+                                onclick="submitForm()">Submit</button></div>
                         <!-- <button type="button" class="btn btn-outline-success mt-2" onclick="submitForm()">Submit</button> -->
                     </form>
                     <div id="responseMessage"></div>
@@ -159,8 +166,8 @@
                 </div>
             </div>
         </div>
-        <hr style="border: 2px solid #000; background-color: grey; width:70% ; border-radius: 2px;"
-            data-aos="flip-left" data-aos-easing="ease-in-sine" data-aos-delay="100">
+        <hr style="border: 2px solid #000; background-color: grey; width:70% ; border-radius: 2px;" data-aos="flip-left"
+            data-aos-easing="ease-in-sine" data-aos-delay="100">
     </section>
     <!--form and details section end-->
 
@@ -179,7 +186,7 @@
         <div class="footer-top pb-4">
             <div class="container">
                 <div class="row">
-    
+
                     <div class="col-lg-4 col-md-6 footer-contact" style="height:200px">
                         <img src="./images/logo.png" height="85%">
                     </div>
@@ -190,13 +197,13 @@
                                 HumanityHub, near DDU university<br>
                                 college road<br>
                                 nadiad , 387001</a><br><br>
-    
+
                             <strong>Phone:</strong> <a href="tel:+918160393932"
                                 style="color: #777777;">+918160393932</a><br>
                             <strong>Phone:</strong> <a href="tel:+917436041801"
                                 style="color: #777777;">+917436041801</a><br>
-    
-                            <strong>Email:</strong> <a href="mailto:kartikpaliwal991@gmail.com"
+
+                            <strong>Email:</strong> <a href="mailto:humanityhub0@gmail.com"
                                 style="color: #777777;">HumanityHub@gmail.com</a><br>
                         </p>
                     </div>
@@ -208,17 +215,17 @@
                                     class="bx bxl-facebook"></i></a>
                             <a href="https://www.instagram.com" class="instagram" target="_blank"><i
                                     class="bx bxl-instagram"></i></a>
-                            <a href="https://www.youtube.com" class="google-plus"
-                                target="_blank"><i class="bx bxl-youtube"></i></a>
-                            <a href="https://www.linkedin.com"
-                                class="linkedin" target="_blank"><i class="bx bxl-linkedin"></i></a>
+                            <a href="https://www.youtube.com" class="google-plus" target="_blank"><i
+                                    class="bx bxl-youtube"></i></a>
+                            <a href="https://www.linkedin.com" class="linkedin" target="_blank"><i
+                                    class="bx bxl-linkedin"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    
-    </footer>    <button onclick="topFunction()" id="topbtn"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
+
+    </footer> <button onclick="topFunction()" id="topbtn"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
