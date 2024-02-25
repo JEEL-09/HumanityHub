@@ -37,7 +37,7 @@ To get involved with HumanityHub, you can:
 
 If you have any questions, suggestions, or would like to get involved, please contact us:
 
-- **Email:** HumanityHub@gmail.com
+- **Email:** humanityhub0@gmail.com
 
 ## Technical Details
 HumanityHub was built using the following technologies :
@@ -66,6 +66,10 @@ To get started with HumanityHub, follow these steps :
     ```
     npm i or npm install
     ```
+    ```
+    npm i -g nodemon
+    ```
+
 3. **Configuration**: Configure your application settings, such as database connection strings and authentication mechanisms, as per your requirements.
 
 4. **Build and Run**: after configuration & all packages set up after that ,  for running project apply the following 
@@ -73,5 +77,9 @@ To get started with HumanityHub, follow these steps :
      ```
     nodemon server.js
     ```
+    open the browser & type the following 
 
+    ```
+    localhost:3000
+    ```
   
