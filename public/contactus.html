@@ -132,7 +132,7 @@
                 <div class="col-sm-5  col-md-6 offset-md-0 contact" data-aos="fade-left" data-aos-easing="ease-in-sine"
                     data-aos-delay="100">
                     <h2>Contact us<hr class="contact-green-hr"></h2>
-                    <form id="contactForm" name='contactform' method="POST" action="/contact">
+                    <form id="contactForm" name='contactform' method="post" action="/contact">
                         <div class="form-group">
                             <label for="name">Name</label>
                             <input class="form-control" type="text" name='name' placeholder="Your Name..." required>
@@ -151,7 +151,7 @@
                             <textarea class="form-control" rows="3" name='message'
                                 placeholder="Write your message here..." required></textarea>
                         </div>
-                        <div class="toast-body"><button type="button" class="btn btn-outline-success mt-2" onclick="submitForm()">Submit</button></div>
+                        <div class="toast-body"><button type="submit" class="btn btn-outline-success mt-2" onclick="submitForm()">Submit</button></div>
                         <!-- <button type="button" class="btn btn-outline-success mt-2" onclick="submitForm()">Submit</button> -->
                     </form>
                     <div id="responseMessage"></div>

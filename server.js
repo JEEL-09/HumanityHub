@@ -1,14 +1,12 @@
 var express = require("express")
 var bodyParser = require("body-parser")
 var mongoose = require("mongoose")
-
+const port=3000;
 const app = express()
 
-app.use(bodyParser.json())
+// app.use(bodyParser.json())
 app.use(express.static('public'))
-app.use(bodyParser.urlencoded({
-    extended:true
-}))
+app.use(bodyParser.urlencoded({ extended: false }));
 
 mongoose.connect('mongodb://localhost:27017/mydb',{
     useNewUrlParser: true,
@@ -19,6 +17,14 @@ var db = mongoose.connection;
 
 db.on('error',()=>console.log("Error in Connecting to Database"));
 db.once('open',()=>console.log("Connected to Database"))
+
+
+app.get('/', (req, res,next) => {
+    res.sendFile(__dirname + '/index.html');
+    next();
+});
+
+
 
 app.post("/contact", (req, res) => {
     var name = req.body.name || "" ;
@@ -45,12 +51,12 @@ app.post("/contact", (req, res) => {
     });
 });
 app.post("/donate", (req, res) => {
+   
     var name = req.body.name || "";
     var email = req.body.email || "";
     var phone = req.body.phone || "";
     var packets = req.body.packets || 0;
     
-    console.log("Name:",name);
     var donater = {
         "name": name,
         "email": email,
@@ -64,7 +70,7 @@ app.post("/donate", (req, res) => {
             return res.status(500).json({ error: "Internal Server Error" });
         }
         console.log("Record Inserted Successfully");
-        return res.status(200).json({ message: "Contacted successfully" });
+        return res.status(200).json({ message: "Thanks for the donation" });
     });
 });
 app.post("/internship",  (req, res) => {
@@ -91,13 +97,6 @@ app.post("/internship",  (req, res) => {
     });
 });
 
-
-app.get("/",(req,res)=>{
-    res.set({
-        "Allow-access-Allow-Origin": '*'
-    })
-    return res.redirect('index.html');
-}).listen(3000);
-
-
-console.log("Listening on PORT 3000");
+app.listen(port, () => {
+    console.log(`Server is running at http://localhost:${port}`);
+});
