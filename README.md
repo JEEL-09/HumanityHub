@@ -37,7 +37,8 @@ To get involved with HumanityHub, you can:
 
 If you have any questions, suggestions, or would like to get involved, please contact us:
 
-- **Email:** HumanityHub@gmail.com
+- **Email:** jfaldu4@gmail.com
+- **Email:** kartikpaliwal991@gmail.com
 
 ## Technical Details
 HumanityHub was built using the following technologies :
