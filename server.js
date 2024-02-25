@@ -19,7 +19,7 @@ db.on('error',()=>console.log("Error in Connecting to Database"));
 db.once('open',()=>console.log("Connected to Database"))
 
 
-app.get('/', (req, res,next) => {
+app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html');
 });
 
