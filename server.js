@@ -21,9 +21,7 @@ db.once('open',()=>console.log("Connected to Database"))
 
 app.get('/', (req, res,next) => {
     res.sendFile(__dirname + '/index.html');
-    next();
 });
-
 
 
 app.post("/contact", (req, res) => {
@@ -49,6 +47,7 @@ app.post("/contact", (req, res) => {
         console.log("Record Inserted Successfully");
         return res.status(200).json({ message: "Thank you for reaching out to us. We greatly appreciate your interest in our organization" });
     });
+    
 });
 app.post("/donate", (req, res) => {
    
